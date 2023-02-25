@@ -1,0 +1,40 @@
+.select-files{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ff6ec4;
+    background-image: url('https://th.bing.com/th/id/R.4e6053ead4a99e3273d7a06b91aace96?rik=AKlxiK2yiqL9fw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fc%2f7%2f3%2f1391531-film-strip-wallpaper-3840x2160-photo.jpg&ehk=VlJ%2bemPSdQUeDQ3fzCupd9ywrOOcnVIaWOJfH0CS7c4%3d&risl=&pid=ImgRaw&r=0'); 
+    background-size: cover;
+}
+.local-wrapper{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) ;
+}
+.file{
+    opacity: 0;
+}
+.file::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+
+.local-wrapper label {
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}
+.local-wrapper label:hover{
+    border-color: #fff;
+    transform: scale(1.2);
+}

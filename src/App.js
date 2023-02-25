@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes , Route} from 'react-router-dom';
+import Local from './components/local';
+import { useSelector } from 'react-redux';
+import { VideoPlayer } from './components/videoPlayer';
+
 
 function App() {
+  const url = useSelector((state)=> state.videoUrl);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">   
+      <Routes>
+        <Route path="/" element={ url=="" ? <Local/> : <VideoPlayer/>}/>
+      </Routes>
     </div>
   );
 }
